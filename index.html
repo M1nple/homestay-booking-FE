@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Homestay Booking
+    </title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-gray-50">
+
+    <div id="navbar"></div>
+
+    <section
+        class="
+            bg-gradient-to-r
+            from-rose-500
+            to-pink-500
+            text-white
+        "
+    >
+
+        <div
+            class="
+                max-w-7xl
+                mx-auto
+                px-6
+                py-24
+            "
+        >
+
+            <h1
+                class="
+                    text-5xl
+                    font-bold
+                    mb-6
+                "
+            >
+                Find Your Perfect Stay
+            </h1>
+
+            <p
+                class="
+                    text-xl
+                    mb-8
+                "
+            >
+                Discover amazing homestays
+                across Vietnam
+            </p>
+
+            <a
+                href="homestays.html"
+                class="
+                    bg-white
+                    text-rose-500
+                    px-8
+                    py-4
+                    rounded-2xl
+                    font-semibold
+                    inline-block
+                "
+            >
+                Explore Now
+            </a>
+
+        </div>
+
+    </section>
+
+    <section
+        class="
+            max-w-7xl
+            mx-auto
+            px-6
+            py-16
+        "
+    >
+
+        <div
+            class="
+                flex
+                items-center
+                justify-between
+                mb-8
+            "
+        >
+
+            <h2
+                class="
+                    text-3xl
+                    font-bold
+                "
+            >
+                Popular Homestays
+            </h2>
+
+        </div>
+
+        <div
+            id="homestaysGrid"
+            class="
+                grid
+                grid-cols-1
+                md:grid-cols-2
+                lg:grid-cols-4
+                gap-6
+            "
+        ></div>
+
+    </section>
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="components/navbar.js"></script>
+    <script src="assets/js/home.js"></script>
+
+</body>
+
+</html>

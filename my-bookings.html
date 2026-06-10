@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        My Bookings
+    </title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+
+    <div id="navbar"></div>
+
+    <main
+        class="
+            max-w-6xl
+            mx-auto
+            px-6
+            py-10
+        "
+    >
+
+        <div
+            class="
+                flex
+                items-center
+                justify-between
+                mb-8
+            "
+        >
+
+            <h1
+                class="
+                    text-3xl
+                    font-bold
+                "
+            >
+                My Bookings
+            </h1>
+
+        </div>
+
+        <div
+            id="bookingsContainer"
+            class="space-y-4"
+        >
+
+            <div
+                class="
+                    bg-white
+                    rounded-2xl
+                    shadow
+                    p-6
+                    text-center
+                    text-gray-500
+                "
+            >
+                Loading bookings...
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/utils.js"></script>
+    <script src="components/navbar.js"></script>
+    <script src="assets/js/my-bookings.js"></script>
+
+</body>
+
+</html>

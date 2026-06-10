@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Login</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body
+    class="
+        min-h-screen
+        bg-gradient-to-br
+        from-rose-500
+        to-pink-600
+        flex
+        items-center
+        justify-center
+        p-4
+    ">
+
+    <div
+        class="
+            bg-white
+            w-full
+            max-w-md
+            rounded-3xl
+            shadow-2xl
+            p-8
+        ">
+
+        <div class="text-center mb-8">
+
+            <h1
+                class="
+                    text-3xl
+                    font-bold
+                ">
+                Welcome Back
+            </h1>
+
+            <p
+                class="
+                    text-gray-500
+                    mt-2
+                ">
+                Login to your account
+            </p>
+
+        </div>
+
+        <form
+            id="loginForm"
+            class="space-y-5">
+
+            <div>
+
+                <label
+                    class="
+                        block
+                        mb-2
+                        font-medium
+                    ">
+                    Email
+                </label>
+
+                <input
+                    id="email"
+                    type="email"
+                    required
+                    class="
+                        w-full
+                        border
+                        rounded-xl
+                        p-3
+                    ">
+            </div>
+
+            <div>
+
+                <label
+                    class="
+                        block
+                        mb-2
+                        font-medium
+                    ">
+                    Password
+                </label>
+
+                <input
+                    id="password"
+                    type="password"
+                    required
+                    class="
+                        w-full
+                        border
+                        rounded-xl
+                        p-3
+                    ">
+            </div>
+
+            <button
+                type="submit"
+                class="
+                    w-full
+                    bg-rose-500
+                    text-white
+                    py-3
+                    rounded-xl
+                    font-semibold
+                ">
+
+                Login
+
+            </button>
+
+        </form>
+
+        <div
+            id="errorMessage"
+            class="
+                text-red-500
+                text-center
+                mt-4
+            ">
+        </div>
+
+    </div>
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/login.js"></script>
+
+</body>
+
+</html>
