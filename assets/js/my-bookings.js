@@ -79,7 +79,14 @@ async function loadBookings() {
                                     text-gray-500
                                 "
                             >
-                                Booking #${booking.id}
+                                <a
+                                    href="
+                                        booking-detail.html?id=${booking.id}
+                                    "
+                                    class="
+                                        block
+                                    "
+                                >
                             </p>
 
                         </div>

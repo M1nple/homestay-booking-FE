@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Payment Success
+    </title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-gray-100">
+
+    <div id="navbar"></div>
+
+    <main
+        class="
+            max-w-3xl
+            mx-auto
+            py-16
+            px-6
+        "
+    >
+
+        <div
+            class="
+                bg-white
+                rounded-3xl
+                shadow
+                p-10
+                text-center
+            "
+        >
+
+            <div
+                class="
+                    text-8xl
+                    mb-6
+                "
+            >
+                ✅
+            </div>
+
+            <h1
+                class="
+                    text-4xl
+                    font-bold
+                    mb-4
+                    text-green-600
+                "
+            >
+                Payment Successful
+            </h1>
+
+            <p
+                class="
+                    text-gray-500
+                    mb-8
+                "
+            >
+                Your booking payment has been completed successfully.
+            </p>
+
+            <div
+                id="bookingInfo"
+                class="
+                    bg-gray-50
+                    rounded-xl
+                    p-4
+                    mb-8
+                "
+            >
+            </div>
+
+            <div
+                class="
+                    flex
+                    justify-center
+                    gap-4
+                "
+            >
+
+                <a
+                    href="my-bookings.html"
+                    class="
+                        bg-rose-500
+                        text-white
+                        px-6
+                        py-3
+                        rounded-xl
+                    "
+                >
+                    My Bookings
+                </a>
+
+                <a
+                    href="my-payments.html"
+                    class="
+                        border
+                        px-6
+                        py-3
+                        rounded-xl
+                    "
+                >
+                    My Payments
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="components/navbar.js"></script>
+
+    <script>
+
+        document.getElementById(
+            "navbar"
+        ).innerHTML =
+            renderNavbar();
+
+        const bookingId =
+            new URLSearchParams(
+                location.search
+            ).get("booking");
+
+        document.getElementById(
+            "bookingInfo"
+        ).innerHTML =
+            bookingId
+            ? `Booking #${bookingId}`
+            : "Payment completed";
+
+    </script>
+
+</body>
+
+</html>

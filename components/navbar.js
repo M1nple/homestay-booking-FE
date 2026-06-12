@@ -48,13 +48,21 @@ function renderNavbar() {
                             Home
                         </a>
 
-                        <a href="my-bookings.html">
-                            My Bookings
-                        </a>
-
                         ${
                             isAuthenticated()
                             ? `
+                                <a href="my-bookings.html">
+                                    My Bookings
+                                </a>
+
+                                <a href="my-payments.html">
+                                    My Payments
+                                </a>
+                                
+                                <a href="profile.html">
+                                    Profile
+                                </a>
+
                                 <button
                                     onclick="logout()"
                                     class="
@@ -67,12 +75,16 @@ function renderNavbar() {
                                 >
                                     Logout
                                 </button>
+                                
+
                             `
                             : `
-                                <a
-                                    href="login.html"
-                                >
+                                <a href="login.html">
                                     Login
+                                </a>
+
+                                <a href="register.html">
+                                    Register
                                 </a>
                             `
                         }

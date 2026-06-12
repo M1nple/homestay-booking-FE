@@ -170,12 +170,14 @@ async function createBooking(
                     ]
                 }
             );
-
+        console.log("BOOKING RESPONSE:", booking);
+        
         const payment =
             await apiRequest(
                 `/payments/vnpay/create/${booking.id}/`,
                 "POST"
             );
+
 
         window.location.href =
             payment.payment_url;

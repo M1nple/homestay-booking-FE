@@ -271,19 +271,20 @@ function renderRooms(
 
                         <a
                             href="
-                                booking.html?room=${room.id}
+                                room-detail.html?id=${room.id}
                             "
                             class="
                                 block
-                                text-center
                                 bg-rose-500
                                 text-white
+                                text-center
                                 py-3
                                 rounded-xl
+                                mt-4
                             "
                         >
-                            Book Now
-                        </a>
+                            View Detail
+                        </a>    
 
                     </div>
 
