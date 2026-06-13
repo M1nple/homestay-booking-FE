@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Edit Homestay</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-gray-100">
+
+    <div id="navbar"></div>
+
+    <main
+        class="
+            max-w-4xl
+            mx-auto
+            py-10
+            px-6
+        "
+    >
+
+        <div
+            class="
+                bg-white
+                rounded-3xl
+                shadow
+                p-8
+            "
+        >
+
+            <h1
+                class="
+                    text-3xl
+                    font-bold
+                    mb-8
+                "
+            >
+                Edit Homestay
+            </h1>
+
+            <form
+                id="homestayForm"
+                class="space-y-5"
+            >
+
+                <input
+                    id="name"
+                    type="text"
+                    placeholder="Homestay Name"
+                    required
+                    class="
+                        w-full
+                        border
+                        p-3
+                        rounded-xl
+                    "
+                >
+
+                <input
+                    id="address"
+                    type="text"
+                    placeholder="Address"
+                    required
+                    class="
+                        w-full
+                        border
+                        p-3
+                        rounded-xl
+                    "
+                >
+
+                <textarea
+                    id="description"
+                    rows="4"
+                    placeholder="Description"
+                    class="
+                        w-full
+                        border
+                        p-3
+                        rounded-xl
+                    "
+                ></textarea>
+
+                <select
+                    id="province"
+                    class="
+                        w-full
+                        border
+                        p-3
+                        rounded-xl
+                    "
+                ></select>
+
+                <select
+                    id="district"
+                    class="
+                        w-full
+                        border
+                        p-3
+                        rounded-xl
+                    "
+                ></select>
+
+                <select
+                    id="ward"
+                    class="
+                        w-full
+                        border
+                        p-3
+                        rounded-xl
+                    "
+                ></select>
+
+                <div>
+
+                    <h3
+                        class="
+                            text-lg
+                            font-semibold
+                            mb-3
+                        "
+                    >
+                        Current Images
+                    </h3>
+
+                    <div
+                        id="currentImages"
+                        class="
+                            grid
+                            grid-cols-3
+                            gap-4
+                            mb-4
+                        "
+                    ></div>
+
+                </div>
+
+                <div>
+
+                    <label
+                        class="
+                            block
+                            mb-2
+                            font-medium
+                        "
+                    >
+                        Upload New Images
+                    </label>
+
+                    <input
+                        type="file"
+                        id="images"
+                        multiple
+                        accept="image/*"
+                        class="
+                            w-full
+                            border
+                            p-3
+                            rounded-xl
+                        "
+                    >
+
+                    <p
+                        class="
+                            text-sm
+                            text-gray-500
+                            mt-2
+                        "
+                    >
+                        Uploading new images will replace all current images.
+                    </p>
+
+                </div>
+
+                <button
+                    type="submit"
+                    class="
+                        w-full
+                        bg-blue-500
+                        text-white
+                        py-4
+                        rounded-xl
+                        font-semibold
+                    "
+                >
+                    Update Homestay
+                </button>
+
+            </form>
+
+        </div>
+
+    </main>
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="components/navbar.js"></script>
+    <script src="assets/js/edit-homestay.js"></script>
+
+</body>
+
+</html>

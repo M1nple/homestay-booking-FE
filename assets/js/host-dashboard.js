@@ -174,6 +174,7 @@ function renderHomestays(
                         "
                     >
                         ${homestay.address}
+
                     </p>
 
                 </div>
@@ -223,6 +224,8 @@ function renderBookings(
                         ${booking.check_in}
                         →
                         ${booking.check_out}
+                        
+                        | guests: ${booking.total_guests}
                     </p>
 
                     <p
@@ -234,6 +237,17 @@ function renderBookings(
                         ${formatPrice(
                             booking.total_price
                         )}
+                    </p>
+
+                    <p
+                        class="
+                            text-sm
+                            text-gray-500
+                        "
+                    >
+                        ${booking.status}
+                        ${booking}
+
                     </p>
 
                 </div>

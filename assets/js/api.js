@@ -98,7 +98,7 @@ async function apiRequest(
 
             message =
                 errorData
-                    .non_field_errors[0];
+                .non_field_errors[0];
 
         } else if (
             errorData.detail
@@ -118,6 +118,13 @@ async function apiRequest(
         throw new Error(
             message
         );
+    }
+
+    // DELETE 204 No Content
+    if (
+        response.status === 204
+    ) {
+        return null;
     }
 
     return await response.json();

@@ -49,7 +49,7 @@ function renderNavbar() {
                         </a>
 
                         ${
-                            isAuthenticated()
+                            isAuthenticated() 
                             ? `
                                 <a href="my-bookings.html">
                                     My Bookings
@@ -76,6 +76,13 @@ function renderNavbar() {
                                     Logout
                                 </button>
                                 
+                                <a href="host-dashboard.html">
+                                    Host Dashboard
+                                </a>
+
+                                <a href="host-homestays.html">
+                                    My Homestays
+                                </a>
 
                             `
                             : `
@@ -88,6 +95,8 @@ function renderNavbar() {
                                 </a>
                             `
                         }
+
+ 
 
                     </div>
 

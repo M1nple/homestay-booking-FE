@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Create Room</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-gray-100">
+
+    <div id="navbar"></div>
+
+    <main
+        class="
+            max-w-3xl
+            mx-auto
+            py-10
+            px-6
+        "
+    >
+
+        <div
+            class="
+                bg-white
+                rounded-3xl
+                shadow
+                p-8
+            "
+        >
+
+            <h1
+                class="
+                    text-3xl
+                    font-bold
+                    mb-8
+                "
+            >
+                Create Room
+            </h1>
+
+            <form
+                id="roomForm"
+                class="space-y-5"
+            >
+
+                <input
+                    id="name"
+                    type="text"
+                    placeholder="Room Name"
+                    required
+                    class="
+                        w-full
+                        border
+                        p-3
+                        rounded-xl
+                    "
+                >
+
+                <input
+                    id="price"
+                    type="number"
+                    placeholder="Price"
+                    required
+                    class="
+                        w-full
+                        border
+                        p-3
+                        rounded-xl
+                    "
+                >
+
+                <input
+                    id="capacity"
+                    type="number"
+                    placeholder="Capacity"
+                    required
+                    class="
+                        w-full
+                        border
+                        p-3
+                        rounded-xl
+                    "
+                >
+
+                <select
+                    id="status"
+                    class="
+                        w-full
+                        border
+                        p-3
+                        rounded-xl
+                    "
+                >
+
+                    <option
+                        value="AVAILABLE"
+                    >
+                        Available
+                    </option>
+
+                    <option
+                        value="MAINTENANCE"
+                    >
+                        Maintenance
+                    </option>
+
+                </select>
+
+                <textarea
+                    id="description"
+                    rows="4"
+                    placeholder="Description"
+                    class="
+                        w-full
+                        border
+                        p-3
+                        rounded-xl
+                    "
+                ></textarea>
+
+                <div>
+
+                    <h3
+                        class="
+                            font-semibold
+                            mb-3
+                        "
+                    >
+                        Amenities
+                    </h3>
+
+                    <div
+                        id="amenitiesContainer"
+                        class="
+                            grid
+                            grid-cols-2
+                            gap-3
+                        "
+                    ></div>
+
+                </div>
+
+                <input
+                    id="images"
+                    type="file"
+                    multiple
+                    accept="image/*"
+                    class="
+                        w-full
+                        border
+                        p-3
+                        rounded-xl
+                    "
+                >
+
+                <button
+                    type="submit"
+                    class="
+                        w-full
+                        bg-rose-500
+                        text-white
+                        py-4
+                        rounded-xl
+                    "
+                >
+                    Create Room
+                </button>
+
+            </form>
+
+        </div>
+
+    </main>
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="components/navbar.js"></script>
+    <script src="assets/js/create-room.js"></script>
+
+</body>
+
+</html>
