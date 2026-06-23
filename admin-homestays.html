@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Homestays</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+    <div id="navbar"></div>
+
+    <main
+        class="
+            max-w-7xl
+            mx-auto
+            py-10
+            px-6
+        "
+    >
+
+        <h1
+            class="
+                text-4xl
+                font-bold
+                mb-8
+            "
+        >
+            Homestays Management
+        </h1>
+
+        <div
+            class="
+                bg-white
+                rounded-3xl
+                shadow
+                overflow-hidden
+            "
+        >
+
+            <table class="w-full">
+
+                <thead class="bg-gray-50">
+
+                    <tr class="text-left">
+
+                        <th class="p-4">ID</th>
+                        <th class="p-4">Name</th>
+                        <th class="p-4">Owner</th>
+                        <th class="p-4">Address</th>
+                        <th class="p-4">Created</th>
+                        <th class="p-4">Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="homestaysTable">
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="components/navbar.js"></script>
+    <script src="assets/js/admin-homestays.js"></script>
+
+</body>
+
+</html>

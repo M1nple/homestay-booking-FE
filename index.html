@@ -21,6 +21,8 @@
 
     <div id="navbar"></div>
 
+    <!-- HERO -->
+
     <section
         class="
             bg-gradient-to-r
@@ -43,7 +45,7 @@
                 class="
                     text-5xl
                     font-bold
-                    mb-6
+                    mb-4
                 "
             >
                 Find Your Perfect Stay
@@ -52,31 +54,121 @@
             <p
                 class="
                     text-xl
-                    mb-8
+                    mb-10
                 "
             >
-                Discover amazing homestays
-                across Vietnam
+                Discover amazing homestays across Vietnam
             </p>
 
-            <a
-                href="homestays.html"
+            <!-- SEARCH BOX -->
+
+            <div
                 class="
                     bg-white
-                    text-rose-500
-                    px-8
-                    py-4
-                    rounded-2xl
-                    font-semibold
-                    inline-block
+                    rounded-3xl
+                    p-6
+                    shadow-xl
+                    text-gray-800
                 "
             >
-                Explore Now
-            </a>
+
+                <div
+                    class="
+                        grid
+                        md:grid-cols-5
+                        gap-4
+                    "
+                >
+
+                    <input
+                        id="search"
+                        type="text"
+                        placeholder="Location or Homestay Name"
+                        class="
+                            border
+                            p-3
+                            rounded-xl
+                        "
+                    >
+
+                    <input
+                        id="guests"
+                        type="number"
+                        min="1"
+                        placeholder="Guests"
+                        class="
+                            border
+                            p-3
+                            rounded-xl
+                        "
+                    >
+
+                    <input
+                        id="minPrice"
+                        type="number"
+                        placeholder="Min Price"
+                        class="
+                            border
+                            p-3
+                            rounded-xl
+                        "
+                    >
+
+                    <input
+                        id="maxPrice"
+                        type="number"
+                        placeholder="Max Price"
+                        class="
+                            border
+                            p-3
+                            rounded-xl
+                        "
+                    >
+
+                    <select
+                        id="ordering"
+                        class="
+                            border
+                            p-3
+                            rounded-xl
+                        "
+                    >
+                        <option value="">
+                            Sort By
+                        </option>
+
+                        <option value="name">
+                            Name A-Z
+                        </option>
+
+                        <option value="-name">
+                            Name Z-A
+                        </option>
+                    </select>
+
+                </div>
+
+                <button
+                    id="searchBtn"
+                    class="
+                        mt-5
+                        bg-rose-500
+                        text-white
+                        px-8
+                        py-3
+                        rounded-xl
+                    "
+                >
+                    Search Homestays
+                </button>
+
+            </div>
 
         </div>
 
     </section>
+
+    <!-- HOMESTAYS -->
 
     <section
         class="
@@ -90,8 +182,8 @@
         <div
             class="
                 flex
-                items-center
                 justify-between
+                items-center
                 mb-8
             "
         >
@@ -102,7 +194,7 @@
                     font-bold
                 "
             >
-                Popular Homestays
+                Available Homestays
             </h2>
 
         </div>
@@ -116,7 +208,8 @@
                 lg:grid-cols-4
                 gap-6
             "
-        ></div>
+        >
+        </div>
 
     </section>
 

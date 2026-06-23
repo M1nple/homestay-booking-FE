@@ -25,6 +25,28 @@ function getRefreshToken() {
     );
 }
 
+function getUser() {
+
+    const user =
+        localStorage.getItem(
+            STORAGE_KEYS.USER
+        );
+
+    return user
+        ? JSON.parse(user)
+        : null;
+}
+
+function getRole() {
+
+    const user =
+        getUser();
+
+    return user
+        ? user.role
+        : null;
+}
+
 function isAuthenticated() {
 
     return !!getAccessToken();
@@ -40,6 +62,10 @@ function logout() {
         STORAGE_KEYS.REFRESH
     );
 
-    window.location.href =
+    localStorage.removeItem(
+        STORAGE_KEYS.USER
+    );
+
+    location.href =
         "index.html";
 }

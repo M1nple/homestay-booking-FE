@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Become Host
+    </title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-gray-100">
+
+<div id="navbar"></div>
+
+<main
+    class="
+        max-w-3xl
+        mx-auto
+        py-10
+        px-6
+    "
+>
+
+    <div
+        class="
+            bg-white
+            rounded-3xl
+            shadow
+            p-8
+        "
+    >
+
+        <h1
+            class="
+                text-3xl
+                font-bold
+                mb-8
+            "
+        >
+            Become A Host
+        </h1>
+
+        <form
+            id="hostRequestForm"
+            class="space-y-5"
+        >
+
+            <input
+                id="business_name"
+                type="text"
+                placeholder="Business Name"
+                required
+                class="
+                    w-full
+                    border
+                    p-3
+                    rounded-xl
+                "
+            >
+
+            <textarea
+                id="description"
+                placeholder="Business Description"
+                rows="4"
+                class="
+                    w-full
+                    border
+                    p-3
+                    rounded-xl
+                "
+            ></textarea>
+
+            <input
+                id="identity_number"
+                type="text"
+                placeholder="Identity Number"
+                required
+                class="
+                    w-full
+                    border
+                    p-3
+                    rounded-xl
+                "
+            >
+
+            <textarea
+                id="reason"
+                placeholder="Why do you want to become a host?"
+                rows="4"
+                class="
+                    w-full
+                    border
+                    p-3
+                    rounded-xl
+                "
+            ></textarea>
+
+            <input
+                id="identity_image"
+                type="file"
+                accept="image/*"
+                class="
+                    w-full
+                    border
+                    p-3
+                    rounded-xl
+                "
+            >
+
+            <button
+                type="submit"
+                class="
+                    w-full
+                    bg-rose-500
+                    text-white
+                    py-4
+                    rounded-xl
+                "
+            >
+                Submit Request
+            </button>
+
+        </form>
+
+    </div>
+
+</main>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/auth.js"></script>
+<script src="components/navbar.js"></script>
+<script src="assets/js/become-host.js"></script>
+
+</body>
+</html>

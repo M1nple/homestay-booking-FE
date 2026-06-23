@@ -1,49 +1,81 @@
 document
-    .getElementById("loginForm")
+    .getElementById(
+        "loginForm"
+    )
     .addEventListener(
         "submit",
-        handleLogin
+        login
     );
 
-async function handleLogin(e) {
+async function login(
+    e
+) {
 
     e.preventDefault();
 
-    const email =
-        document.getElementById(
-            "email"
-        ).value;
-
-    const password =
-        document.getElementById(
-            "password"
-        ).value;
-
-    const error =
-        document.getElementById(
-            "errorMessage"
-        );
-
     try {
 
-        const response =
+        const data =
             await apiRequest(
                 "/auth/login/",
                 "POST",
                 {
-                    email,
-                    password
+                    email:
+                        document.getElementById(
+                            "email"
+                        ).value,
+
+                    password:
+                        document.getElementById(
+                            "password"
+                        ).value
                 }
             );
 
-        saveTokens(response);
+        saveTokens(data);
 
-        window.location.href =
-            "index.html";
+        const me =
+            await apiRequest(
+                "/auth/me/"
+            );
 
-    } catch (err) {
+        localStorage.setItem(
+            STORAGE_KEYS.USER,
+            JSON.stringify(
+                me
+            )
+        );
 
-        error.textContent =
-            "Email hoặc mật khẩu không đúng";
+        if (
+            me.role ===
+            "ADMIN"
+        ) {
+
+            location.href =
+                "admin-dashboard.html";
+        }
+
+        else if (
+            me.role ===
+            "HOST"
+        ) {
+
+            location.href =
+                "host-dashboard.html";
+        }
+
+        else {
+
+            location.href =
+                "index.html";
+        }
+
+    }
+
+    catch (error) {
+
+        alert(
+            error.message
+        );
     }
 }
